@@ -1,0 +1,10 @@
+# work files – not part of the published site
+references/
+server.js
+.claude/
+BRAND.md
+assets/products/_raw/
+assets/products/*.png
+assets/floats/
+assets/hero/_hero-linen-4k.png
+assets/logo-screenshot.webp
