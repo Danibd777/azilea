@@ -39,6 +39,8 @@ a { color: inherit; }
   isolation: isolate;
 }
 .hero__bg { position: absolute; inset: -2%; z-index: -2; }
+.hero__gl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.hero.has-gl .hero__bg img { visibility: hidden; } /* the WebGL canvas draws the photo */
 .hero__bg img {
   width: 100%; height: 100%;
   object-fit: cover;
