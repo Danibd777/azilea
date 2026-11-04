@@ -27,7 +27,7 @@
   /* ---------- entrance ---------- */
   const tl = gsap.timeline();
   const visual = window.azileaHeroVisual || img; // the rippling canvas when WebGL is available
-  tl.fromTo(visual, { scale: 1.12, opacity: 0 }, { scale: 1.03, opacity: 1, duration: 2.8, ease: 'power2.out' }, 0)
+  tl.fromTo(visual, { opacity: 0 }, { opacity: 1, duration: 1.6, ease: 'power2.out' }, 0) // plain fade, no zoom
     .from('[data-line]', { yPercent: 110, duration: 1.4, ease: 'power4.out', stagger: 0.12 }, 0.6)
     .fromTo('[data-reveal]', { opacity: 0, y: 14, filter: 'blur(6px)' },
       { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.1, ease: 'power3.out', stagger: 0.08 }, 1.0)
@@ -46,7 +46,7 @@
   const frame = img.parentElement;
   const loop = () => {
     // with the ripple running, the photo no longer leans – the surface itself answers the pointer
-    const lean = window.azileaHeroVisual ? 0 : 0.05;
+    const lean = 0; // pointer lean switched off for now – the photo stays still
     cur.x += (target.x - cur.x) * lean;
     cur.y += (target.y - cur.y) * lean;
     const scrolled = Math.min(window.scrollY, hero.offsetHeight);
